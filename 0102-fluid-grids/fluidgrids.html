@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<title>Fluid Grids</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<link rel="stylesheet" href="type.css" type="text/css" media="screen, projection" />
+
+<style type="text/css" media="screen, projection">
+/*
+  Layout
+*/
+#page {
+/* Rein the long line lengths matching the browser width.
+
+   The last line of our rule, we’re using a variant of our font-size formula 
+   to define the maximum width of our design. By dividing the comp’s width of 
+   988px by our base font-size of 16px, we can set a max-width in ems to 
+   approximate the pixel-based width from our mockup, which will prevent 
+   the page from exceeding our ideal of 988px. But since we’ve used ems 
+   to set this upper limit, the max-width will scale up as the user 
+   increases her browser’s text size.
+*/
+  margin: 40px auto;
+  padding: 0 1em;
+  max-width: 61.75em;   /* 988px / 16px = 61.75em */
+}
+
+h1 {
+  margin-left: 14.575%; /* 144px / 988px = 0.14575 */
+  width: 70.85%;        /* 700px / 988px = 0.7085 */
+/* In the comp, the page’s title spans five columns and their four gutters, 
+   with a total width of 700px. It’s also removed from the left-hand edge 
+   of the page by one column/gutter pair, making for a nice 144px offset. A
+   nd if we were working in a fixed-width design, our job would be pretty 
+   straightforward.
+
+  h1 {
+      margin-left: 144px;
+      width: 700px;
+  }
+
+  We can use the same proportional analysis to transform pixel-based column
+  widths into percentage-based, flexible measurements. So we’re working from a
+  target value of 700px for the page’s title—but it’s contained within a 
+  designed width of 988px.
+*/
+}
+
+.entry {
+  float: left;
+  width: 100%;
+}
+
+.entry h2 {
+  float: right;
+  width: 85.425%;   /* 844px / 988px = 0.85425 */
+}
+
+.entry .info {
+  float: left;
+  margin-top: 0.72727em;  /* 8px / 11px = 0.72727em */
+  width: 12.551%;   /* 124px / 988px = .12551 */
+}
+
+.entry .content {
+  float: right;
+  width: 85.425%;   /* 844px / 988px = 0.85425 */
+}
+
+.entry .main {
+  float: left;
+  width: 82.938%; /* 700px / 844px = 0.82938 */
+}
+
+.entry .meta {
+  float: right;
+  width: 14.692%; /* 124px / 844px = 0.14692 */
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="page">
+  <h1>The Ratio Revolution Will Not Be Televised</h1>
+
+  <div class="entry">
+    <h2>Anyone else tired of Helvetica?</h2>
+
+    <h3 class="info">A <a href="#">Blog</a> Entry:</h3>
+
+    <div class="content">
+      <div class="main">
+        <p>I mean it: I&#8217;ve got your <i xml:lang="de">Neue Haas Grotesk</i> right here, buddy. Along with some lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+        <p>Yeah, you heard me.</p>
+
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div><!-- /end .content -->
+
+      <div class="meta">
+        <p>Posted on 15 February 2009. <a href="#">15 comments</a> so far.</p>
+
+        <p>Tagged with <a href="#">rants</a>, <a href="#">typography</a>, <a href="#">filler copy</a>, <a href="#">sunshine</a> and <a href="#">puppies</a>.</p>
+      </div><!-- /end .meta -->
+    </div><!-- /end .main -->
+  </div><!-- /end .entry -->
+</div><!-- /end #page -->
+
+<div class="comp">
+  <img src="comp-grid.gif" height="45%" width="45%">
+  <br>
+  <img src="comp-areas.gif" height="45%" width="45%">
+  <br>
+  <img src="layout-entry.gif">
+</div>
+
+</body>
+</html>
