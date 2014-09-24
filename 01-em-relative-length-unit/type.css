@@ -1,0 +1,72 @@
+/*
+  There are two types of length units: relative and absolute. Relative length
+  units specify a length relative to another length property. Style sheets that
+  use relative units can more easily scale from one output environment to 
+  another.
+
+  The actual size of an element's em is computed relative to the font-size of 
+  its parent element.
+
+  With a font-size of 100%, all the elements in our page are sized relative to
+  the browser's default type size, which in most cases is 16px.
+
+  If we could treat font sizes not as pixels, but as proportions measured 
+  against their container, we could do the same with the different elements
+  draped across our grid.
+
+  How do we express the text size of 24 pixels in ems?
+
+  We take the target value for each element's font-size in pixels and 
+  divide it by the font-size of its container (that is, its context). 
+  We're left with the desired font-size, expressed in relative, 
+  em-friendly terms. Or to put it more succinctly:
+
+  target / context = result
+
+  If we assume the body's default type size to be 16px, we can plug each 
+  desired font-size value into this formula. So to properly match our 
+  header to the comp, we divide the target value (24px) by the font-size 
+  of its container (16px):
+
+  24 / 16 = 1.5
+
+  Font Size.............................................................
+  h1              24px Georgia    /  16px  = 1.5em
+  paragraph       16px Helvetica  /  16px  = 1em
+  unordered list  14px Helvetica  /  16px  = 0.875em
+
+  Line Height...........................................................
+  h1              22px Georgia    /  24px  = 0.91667em
+  paragraph       22px Helvetica  /  16px  = 1.375em
+  unordered list  18px Helvetica  /  14px  = 1.28571em
+
+  */
+
+#demo {
+  outline: 1px solid #CCC;
+  margin: 10px;
+  padding: 10px;
+  width: 520px;
+}
+
+body {
+  font: normal 100%/1.375 Helvetica, Arial, sans-serif; 
+                              /* 22px / 16px = 1.375 */
+}
+
+h1 {
+  font-family: Georgia, serif;
+  font-size: 1.5em;           /* 24px / 16px = 1.5em */
+  line-height: 0.91667em;     /* 22px / 24px = 0.91667em */
+  margin: 0.5em 0;
+}
+
+ul {
+  font-size: 0.875em;         /* 14px / 16px = 0.875em */
+  line-height: 1.28571;       /* 18px / 14px = 1.28571 */
+}
+
+li {
+  margin-bottom: 0.42857em;   /* 6px / 14px = 0.42857em */
+}
+
