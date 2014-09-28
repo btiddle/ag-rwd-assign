@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>Default Settings</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <style type="text/css" media="all">
+        html { 
+          font-size: 100%;
+          line-height: 1;
+        }
+    </style>
+  </head>
+  <body>
+    <p>Paragraph</p>
+    <ul>
+      <li> Unordered List </li>
+    </ul>
+    <h1> Heading 1 </h1>
+    <h2> Heading 2 </h2>
+    <h3> Heading 3 </h3>
+    <h4> Heading 4 </h4>
+    <h5> Heading 5 </h5>
+    <h6> Heading 6 </h6> Hello
+  </body>
+</html>
+
+<pre>
+
+Formula to convert pixels to ems is
+  (target px) divided by (context px) = (value em)
+  where 'context px' is parent value (in most cases font size of html)
+
+
+All browser agreed upon default behavior when html font-size is 100% and line-height is 1.
+=====    ======================     =========================   =====================    ===========================
+         pixels                     em                          pixels to em formula     pixels to em formula
+tag      font-size   line-height    font-size     line-height   font-size                line-height
+=====    =======================    =========================   ======================   ============================
+html     16px        16px           1em            1em          16px / 16px = 1em        16px / 16px = 1em 
+body     16px        16px           1em            1em          16px / 16px = 1em        16px / 16px = 1em 
+p        16px        16px           1em            1em          16px / 16px = 1em        16px / 16px = 1em 
+ul       16px        16px           1em            1em          16px / 16px = 1em        16px / 16px = 1em 
+h1       32px        32px           2em            2em          32px / 16px = 2em        32px / 16px = 2em
+h2       24px        24px           1.5em          1.5em        24px / 16px = 1.5        24px / 16px = 1.5
+
+
+Theses values are not the same across browsers. Chrome values are listed below.
+=====    ======================     =========================   =====================    ===========================
+         pixels                     em                          pixels to em formula     pixels to em formula
+tag      font-size   line-height    font-size     line-height   font-size                line-height
+=====    =======================    =========================   ======================   ============================
+h3       19px        18.7199px      1.1875em      1.1699em      19px / 16px = 1.1875em   18.7199 / 16px = 1.1699em
+h4       16px        16px           1em           1em           16px / 16px = 1em        16px / 16px = 1em 
+h5       13px        13.2799px      0.125em       0.8299em      13px / 16px = 0.125em    13.2799px / 16px = 0.8299em
+h6       11px        10.7200px      0.6875em      0.67em        11px / 16px = 0.6875em   10.7200 / 16px = 0.67em
+
+</pre>
